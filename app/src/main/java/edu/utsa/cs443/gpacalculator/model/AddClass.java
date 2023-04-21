@@ -1,3 +1,5 @@
+package edu.utsa.cs443.gpacalculator.model;
+
 public class AddClass {
     private String className;
     private int creditHours;
