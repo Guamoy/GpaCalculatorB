@@ -17,6 +17,7 @@ public class SimpleGrades {
 
     /**
      * Returns current GPA
+     * TODO truncate and round GPA to 2 decimal places
      * @return double GPA
      */
     public double getGPA() {
