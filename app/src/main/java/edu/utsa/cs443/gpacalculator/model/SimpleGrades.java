@@ -80,7 +80,6 @@ public class SimpleGrades {
     /**
      * Converts user input to double and adds to GPA
      *
-     * TODO ?? maybe convert to hashmap in <String lettergrade, double GPAValue> pair instead of switch?
      * it would look much better in code but otherwise the impact is minimal
      *
      * @param letterGrade
