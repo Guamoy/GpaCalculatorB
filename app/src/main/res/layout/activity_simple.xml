@@ -10,7 +10,7 @@
         android:id="@+id/simple_GPA_display"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="176dp"
         android:text="GPA here"
         app:layout_constraintEnd_toEndOf="parent"
@@ -164,5 +164,45 @@
                 android:text="Really long scrolling text box containing all previous input letter grades\nEx:\nA+\nA-\nA\n" />
         </LinearLayout>
     </ScrollView>
+
+    <TextView
+        android:id="@+id/creditsSimple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="120dp"
+        android:text="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/creditDecrement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="104dp"
+        android:text="Credit -1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/creditIncrement"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="102dp"
+        android:layout_marginEnd="60dp"
+        android:text="Credit +1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/creditDisplaySimple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="164dp"
+        android:layout_marginBottom="16dp"
+        android:text="Credit Hours:"
+        app:layout_constraintBottom_toTopOf="@+id/creditsSimple"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

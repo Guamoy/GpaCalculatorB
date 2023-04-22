@@ -1,20 +1,41 @@
 package edu.utsa.cs443.gpacalculator.model;
 
+import java.util.HashMap;
+
 public class SimpleGrades {
 
     public double GPA; // 100% we get floating point precision errors here
-    public double weightGPA;
+    public int weightGPA;
+    private HashMap<String, Double> gradeValues;
+
 
     /**
      * SimpleGrades Constructor
      * @param GPA
      * @param weightGPA - interchangeable with creditHours
      */
-    public SimpleGrades(double GPA, double weightGPA) {
+    public SimpleGrades(double GPA, int weightGPA) {
         this.GPA = GPA;
         this.weightGPA = weightGPA;
+        gradeValues = new HashMap<>();
+        gradeValues.put("A+", 4.0);
+        gradeValues.put("A", 4.0);
+        gradeValues.put("A-", 3.67);
+        gradeValues.put("B+", 3.33);
+        gradeValues.put("B", 3.0);
+        gradeValues.put("B-", 2.67);
+        gradeValues.put("C+", 2.33);
+        gradeValues.put("C", 2.0);
+        gradeValues.put("C-", 1.67);
+        gradeValues.put("D+", 1.33);
+        gradeValues.put("D", 1.0);
+        gradeValues.put("D-", .67);
+        gradeValues.put("F", 0.0);
     }
 
+    /**public int getWeightInt() {
+        return (int)weightGPA;
+    }**/
     /**
      * Returns current GPA
      * TODO truncate and round GPA to 2 decimal places
@@ -36,7 +57,7 @@ public class SimpleGrades {
      * Gets weight / total credit hours of GPA
      * @return double weightGPA
      */
-    public double getWeightGPA() {
+    public int getWeightGPA() {
         return weightGPA;
     }
 
@@ -44,7 +65,7 @@ public class SimpleGrades {
      * Sets weight / total credit hours of GPA
      * @param weightGPA
      */
-    public void setWeightGPA(double weightGPA) {
+    public void setWeightGPA(int weightGPA) {
         this.weightGPA = weightGPA;
     }
 
@@ -52,61 +73,26 @@ public class SimpleGrades {
      * Increases credit hours of GPA
      * @param countToIncrease
      */
-    public void increaseWeightGPA(double countToIncrease) {
+    public void increaseWeightGPA(int countToIncrease) {
         this.weightGPA += countToIncrease;
     }
 
     /**
      * Converts user input to double and adds to GPA
      *
-     * TODO ?? maybe convert to hashmap in <String lettergrade, GPAValue> pair instead of switch?
+     * TODO ?? maybe convert to hashmap in <String lettergrade, double GPAValue> pair instead of switch?
      * it would look much better in code but otherwise the impact is minimal
      *
      * @param letterGrade
      */
-    public void addLetterGrade(String letterGrade) {
-        if (this.weightGPA < 0) //avoid divide by 0
-            this.weightGPA = 0;
-
-        switch(letterGrade) {
-            case "A+":
-            case "A":
-                this.GPA = (this.GPA * this.weightGPA + 4.0) / (this.weightGPA + 1);
-                break;
-            case "A-":
-                this.GPA = (this.GPA * this.weightGPA + 3.67) / (this.weightGPA + 1);
-                break;
-            case "B+":
-                this.GPA = (this.GPA * this.weightGPA + 3.33) / (this.weightGPA + 1);
-                break;
-            case "B":
-                this.GPA = (this.GPA * this.weightGPA + 3.00) / (this.weightGPA + 1);
-                break;
-            case "B-":
-                this.GPA = (this.GPA * this.weightGPA + 2.67) / (this.weightGPA + 1);
-                break;
-            case "C+":
-                this.GPA = (this.GPA * this.weightGPA + 2.33) / (this.weightGPA + 1);
-                break;
-            case "C":
-                this.GPA = (this.GPA * this.weightGPA + 2.0) / (this.weightGPA + 1);
-                break;
-            case "C-":
-                this.GPA = (this.GPA * this.weightGPA + 1.67) / (this.weightGPA + 1);
-                break;
-            case "D+":
-                this.GPA = (this.GPA * this.weightGPA + 1.33) / (this.weightGPA + 1);
-                break;
-            case "D":
-                this.GPA = (this.GPA * this.weightGPA + 1.0) / (this.weightGPA + 1);
-                break;
-            case "D-":
-                this.GPA = (this.GPA * this.weightGPA + .67) / (this.weightGPA + 1);
-                break;
-            case "F":
-                this.GPA = (this.GPA * this.weightGPA + 0.0) / (this.weightGPA + 1);
-                break;
+    public void addLetterGrade(String letterGrade, int creditHours) {
+        if (this.weightGPA == 0) { //avoids multiplying by zero on first usage
+            setGPA(this.GPA + gradeValues.get(letterGrade));
         }
-        increaseWeightGPA(1.0);
+        else {
+            setGPA((this.GPA * this.weightGPA + gradeValues.get(letterGrade))
+                    / (this.weightGPA + creditHours));
+        }
+        increaseWeightGPA(creditHours);
     }
 }

@@ -22,13 +22,23 @@ public class SimpleController extends AppCompatActivity implements View.OnClickL
     @Override
     public void onClick(View view) {
         Button clickedButton = (Button) view;
-        grades.addLetterGrade(clickedButton.getText().toString());
-        updateGPA();
-        updateInputLog(clickedButton.getText().toString());
+        if (clickedButton.getText().toString().equals("Credit +1")) {
+            updateCreditHours(1);
+        }
+        else if (clickedButton.getText().toString().equals("Credit -1")) {
+            updateCreditHours(-1);
+        }
+        else {
+            TextView creditText = activity.findViewById(R.id.creditsSimple);
+            grades.addLetterGrade(clickedButton.getText().toString(),
+                    Integer.parseInt(creditText.getText().toString()));
+            updateGPA();
+            updateInputLog(clickedButton.getText().toString());
+        }
     }
 
     public void createModel() {
-        grades = new SimpleGrades(0.0, 0.0);
+        grades = new SimpleGrades(0.0, 0);
         initializeDisplays();
     }
 
@@ -43,6 +53,12 @@ public class SimpleController extends AppCompatActivity implements View.OnClickL
         gpaText.setText(Double.toString(grades.getGPA()));
     }
 
+    private void updateCreditHours(int change) {
+        TextView creditText = activity.findViewById(R.id.creditsSimple);
+        int newValue = Integer.parseInt(creditText.getText().toString()) + change;
+        creditText.setText(Integer.toString(newValue));
+    }
+
     /**
      * TODO Change append method from new line on each input to more condensed method of display
      * also maybe show value of Letter Grade as well (A+ - 4.0, C - 2.0)
@@ -54,4 +70,5 @@ public class SimpleController extends AppCompatActivity implements View.OnClickL
         //above is slightly cursed way of appending to beginning of text view
         //inputLog.append("\n" + input);
     }
+
 }

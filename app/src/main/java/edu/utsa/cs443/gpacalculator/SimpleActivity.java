@@ -16,7 +16,8 @@ public class SimpleActivity extends AppCompatActivity {
         setContentView(R.layout.activity_simple);
 
         int[] buttonIDs = {R.id.aplus, R.id.A, R.id.aminus, R.id.bplus, R.id.B, R.id.bminus,
-                R.id.cplus, R.id.C, R.id.cminus, R.id.dplus, R.id.D, R.id.dminus, R.id.F};
+                R.id.cplus, R.id.C, R.id.cminus, R.id.dplus, R.id.D, R.id.dminus, R.id.F
+                , R.id.creditDecrement, R.id.creditIncrement};
 
         controller = new SimpleController(this);
         for (int buttonID: buttonIDs) {
