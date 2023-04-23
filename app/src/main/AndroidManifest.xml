@@ -12,6 +12,9 @@
         android:theme="@style/Theme.GpaCalculator"
         tools:targetApi="31">
         <activity
+            android:name=".GradeNeededActivity"
+            android:exported="false" />
+        <activity
             android:name=".AssignEditActivity"
             android:exported="false" />
         <activity

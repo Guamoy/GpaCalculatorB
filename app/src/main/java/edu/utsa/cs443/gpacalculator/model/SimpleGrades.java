@@ -80,8 +80,6 @@ public class SimpleGrades {
     /**
      * Converts user input to double and adds to GPA
      *
-     * it would look much better in code but otherwise the impact is minimal
-     *
      * @param letterGrade
      */
     public void addLetterGrade(String letterGrade, int creditHours) {
