@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/settings_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_margin="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <CheckBox
+        android:id="@+id/notification_checkbox"
+        android:layout_width="220dp"
+        android:layout_height="67dp"
+        android:layout_below="@id/settings_title"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:checked="true"
+        android:text="Enable notifications" />
+
+    <Switch
+        android:id="@+id/theme_switch"
+        android:layout_width="144dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/notification_checkbox"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-5dp"
+        android:layout_marginEnd="16dp"
+        android:checked="false"
+        android:text="Dark mode" />
+
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_below="@id/theme_switch"
+        android:layout_marginTop="32dp"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/about_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About"
+        android:layout_below="@id/save_button"
+        android:layout_marginTop="32dp"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/help_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Help"
+        android:layout_below="@id/about_button"
+        android:layout_marginTop="32dp"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/language_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Change language"
+        android:layout_below="@id/help_button"
+        android:layout_marginTop="32dp"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import edu.utsa.cs443.gpacalculator.DetailedActivity;
 import edu.utsa.cs443.gpacalculator.GradeNeededActivity;
 import edu.utsa.cs443.gpacalculator.R;
+import edu.utsa.cs443.gpacalculator.SettingsActivity;
 import edu.utsa.cs443.gpacalculator.SimpleActivity;
 
 public class MainController extends AppCompatActivity implements View.OnClickListener {
@@ -38,6 +39,11 @@ public class MainController extends AppCompatActivity implements View.OnClickLis
         else if (clickedButton.getId() == R.id.gradeNeededButton) {
             Log.d("GradeNeeded Pressed", "Starting GradeNeeded Activity");
             Intent intent = new Intent(activity, GradeNeededActivity.class);
+            activity.startActivity(intent);
+        }
+        else if (clickedButton.getId() == R.id.settings) {
+            Log.d("Settings Pressed", "Starting Settings Activity");
+            Intent intent = new Intent(activity, SettingsActivity.class);
             activity.startActivity(intent);
         }
     }
