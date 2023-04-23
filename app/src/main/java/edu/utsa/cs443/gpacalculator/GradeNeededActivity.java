@@ -9,6 +9,8 @@ import android.widget.Spinner;
 import java.util.ArrayList;
 import java.util.List;
 
+import edu.utsa.cs443.gpacalculator.controller.GradeNeededController;
+
 public class GradeNeededActivity extends AppCompatActivity {
 
     private GradeNeededController controller;

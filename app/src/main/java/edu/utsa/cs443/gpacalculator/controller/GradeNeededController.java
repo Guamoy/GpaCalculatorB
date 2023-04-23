@@ -1,4 +1,4 @@
-package edu.utsa.cs443.gpacalculator;
+package edu.utsa.cs443.gpacalculator.controller;
 
 import android.app.Activity;
 import android.text.TextUtils;
@@ -15,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 import java.util.List;
 
+import edu.utsa.cs443.gpacalculator.R;
 import edu.utsa.cs443.gpacalculator.model.GradeFinder;
 
 public class GradeNeededController extends AppCompatActivity implements View.OnClickListener {

@@ -33,6 +33,11 @@ public class SimpleGrades {
         gradeValues.put("F", 0.0);
     }
 
+    public String getGPAAsString() {
+        String sToReturn = String.format("%.2f", getGPA());
+        return sToReturn;
+    }
+
     /**public int getWeightInt() {
         return (int)weightGPA;
     }**/

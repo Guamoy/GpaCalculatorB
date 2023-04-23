@@ -50,7 +50,7 @@ public class SimpleController extends AppCompatActivity implements View.OnClickL
 
     private void updateGPA() {
         TextView gpaText = activity.findViewById(R.id.simple_GPA_display);
-        gpaText.setText(Double.toString(grades.getGPA()));
+        gpaText.setText(grades.getGPAAsString());
     }
 
     private void updateCreditHours(int change) {
