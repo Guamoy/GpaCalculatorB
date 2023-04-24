@@ -34,11 +34,10 @@
         android:layout_width="162dp"
         android:layout_height="69dp"
         android:layout_marginEnd="40dp"
-        android:layout_marginBottom="76dp"
+        android:layout_marginBottom="72dp"
         android:fontFamily="@font/archivo_black"
         android:gravity="center_horizontal|center_vertical"
         android:text="0.0"
-        android:textAlignment="center"
         android:textColor="@color/material_dynamic_primary30"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -87,7 +86,11 @@
             android:id="@+id/sumLabInput"
             android:layout_width="352dp"
             android:layout_height="56dp"
-            android:hint="Enter Sum of Lab Grades" />
+            android:fontFamily="@font/amaranth"
+            android:gravity="center_horizontal"
+            android:hint="Enter Sum of Lab Grades"
+            android:textColor="@color/teal_700"
+            android:textSize="20sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -107,7 +110,11 @@
             android:id="@+id/midtermInput"
             android:layout_width="352dp"
             android:layout_height="56dp"
-            android:hint="Enter Midterm Grade" />
+            android:fontFamily="@font/amaranth"
+            android:gravity="center_horizontal"
+            android:hint="Enter Midterm Grade"
+            android:textColor="@color/teal_700"
+            android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -126,7 +133,10 @@
             android:id="@+id/sumProjectInput"
             android:layout_width="352dp"
             android:layout_height="56dp"
-            android:hint="Enter Sum of Project Grades" />
+            android:fontFamily="@font/amaranth"
+            android:gravity="center_horizontal"
+            android:hint="Enter Sum of Project Grades"
+            android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -145,23 +155,28 @@
             android:id="@+id/sumQuizInput"
             android:layout_width="352dp"
             android:layout_height="56dp"
-            android:hint="Enter Sum of Quiz Grades" />
+            android:fontFamily="@font/amaranth"
+            android:gravity="center_horizontal"
+            android:hint="Enter Sum of Quiz Grades"
+            android:textAlignment="center"
+            android:textColor="@color/teal_700"
+            android:textSize="20sp" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="218dp"
-        android:layout_height="82dp"
+        android:layout_width="260dp"
+        android:layout_height="84dp"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="24dp"
         android:layout_marginEnd="100dp"
         android:fontFamily="@font/archivo_black"
+        android:gravity="center_horizontal|center_vertical"
         android:text="What Do I Need on The Final?"
         android:textAlignment="center"
         android:textColor="@color/material_dynamic_primary50"
-        android:textSize="24sp"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
