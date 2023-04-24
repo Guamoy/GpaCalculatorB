@@ -8,12 +8,19 @@
 
     <TextView
         android:id="@+id/simple_GPA_display"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="176dp"
-        android:text="GPA here"
+        android:layout_width="91dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="200dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="192dp"
+        android:fontFamily="@font/amaranth"
+        android:text="0.0"
+        android:textAlignment="center"
+        android:textColor="@color/material_dynamic_primary50"
+        android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
@@ -23,6 +30,7 @@
         android:layout_marginStart="164dp"
         android:layout_marginTop="240dp"
         android:text="B"
+        android:backgroundTint="@color/material_dynamic_primary50"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -30,8 +38,9 @@
         android:id="@+id/aminus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="264dp"
+        android:layout_marginStart="268dp"
         android:layout_marginTop="180dp"
+        android:backgroundTint="@color/material_dynamic_primary50"
         android:text="A-"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -43,6 +52,7 @@
         android:layout_marginStart="164dp"
         android:layout_marginTop="180dp"
         android:text="A"
+        android:backgroundTint="@color/material_dynamic_primary50"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -50,8 +60,9 @@
         android:id="@+id/cplus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
+        android:layout_marginStart="56dp"
         android:layout_marginTop="300dp"
+        android:backgroundTint="@color/material_dynamic_primary50"
         android:text="C+"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -60,8 +71,9 @@
         android:id="@+id/cminus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="264dp"
+        android:layout_marginStart="268dp"
         android:layout_marginTop="300dp"
+        android:backgroundTint="@color/material_dynamic_primary50"
         android:text="C-"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -70,8 +82,9 @@
         android:id="@+id/bminus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="264dp"
+        android:layout_marginStart="268dp"
         android:layout_marginTop="240dp"
+        android:backgroundTint="@color/material_dynamic_primary50"
         android:text="B-"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -80,8 +93,9 @@
         android:id="@+id/aplus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
+        android:layout_marginStart="56dp"
         android:layout_marginTop="180dp"
+        android:backgroundTint="@color/material_dynamic_primary50"
         android:text="A+"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -90,8 +104,9 @@
         android:id="@+id/bplus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
+        android:layout_marginStart="56dp"
         android:layout_marginTop="240dp"
+        android:backgroundTint="@color/material_dynamic_primary50"
         android:text="B+"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -103,6 +118,7 @@
         android:layout_marginStart="164dp"
         android:layout_marginTop="300dp"
         android:text="C"
+        android:backgroundTint="@color/material_dynamic_primary50"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -111,6 +127,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="164dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/material_dynamic_primary50"
         android:text="F"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/D" />
@@ -119,8 +137,9 @@
         android:id="@+id/dplus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="11dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="@color/material_dynamic_primary50"
         android:text="D+"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cplus" />
@@ -129,8 +148,9 @@
         android:id="@+id/D"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="12dp"
+        android:backgroundTint="@color/material_dynamic_primary50"
         android:text="D"
         app:layout_constraintStart_toEndOf="@+id/dplus"
         app:layout_constraintTop_toBottomOf="@+id/C" />
@@ -139,16 +159,18 @@
         android:id="@+id/dminus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="12dp"
+        android:backgroundTint="@color/material_dynamic_primary50"
         android:text="D-"
         app:layout_constraintStart_toEndOf="@+id/D"
         app:layout_constraintTop_toBottomOf="@+id/cminus" />
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="475dp"
+        android:layout_marginTop="490dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -161,17 +183,20 @@
                 android:id="@+id/inputGrades"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Really long scrolling text box containing all previous input letter grades\nEx:\nA+\nA-\nA\n" />
+                android:text="" />
         </LinearLayout>
     </ScrollView>
 
     <TextView
         android:id="@+id/creditsSimple"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="200dp"
-        android:layout_marginTop="120dp"
+        android:layout_width="39dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="184dp"
+        android:layout_marginTop="128dp"
+        android:fontFamily="@font/amaranth"
         android:text="1"
+        android:textAlignment="center"
+        android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -179,8 +204,9 @@
         android:id="@+id/creditDecrement"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="65dp"
-        android:layout_marginTop="104dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="120dp"
+        android:backgroundTint="@color/material_dynamic_primary50"
         android:text="Credit -1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -189,20 +215,36 @@
         android:id="@+id/creditIncrement"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="102dp"
-        android:layout_marginEnd="60dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="120dp"
+        android:backgroundTint="@color/material_dynamic_primary50"
         android:text="Credit +1"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/creditsSimple"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/creditDisplaySimple"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="164dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginBottom="8dp"
         android:text="Credit Hours:"
+        android:textColor="@color/black"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/creditsSimple"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="412dp"
+        android:layout_height="26dp"
+        android:text="Input Log"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

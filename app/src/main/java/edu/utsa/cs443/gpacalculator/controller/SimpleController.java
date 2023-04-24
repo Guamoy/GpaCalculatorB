@@ -66,7 +66,9 @@ public class SimpleController extends AppCompatActivity implements View.OnClickL
      */
     private void updateInputLog(String input) {
         TextView inputLog = activity.findViewById(R.id.inputGrades);
-        inputLog.setText(input + "\n" + inputLog.getText().toString());
+        TextView creditText = activity.findViewById(R.id.creditsSimple);
+        String creditHours = creditText.getText().toString();
+        inputLog.setText(input + " - " + creditHours + " Credit Hours\n" + inputLog.getText().toString());
         //above is slightly cursed way of appending to beginning of text view
         //inputLog.append("\n" + input);
     }

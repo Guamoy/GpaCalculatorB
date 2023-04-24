@@ -57,7 +57,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:textSize="16sp"
-                android:text="4. To start over, simply go edit this information or press the back button to head over to the main screen"/>
+                android:text="4. To start over, simply go edit this information or press the back button to head over to the main screen\n\n The GPA Calculator was created by the Debug Thugs, consisting of Diego Ayala, Esteban Leal, and Georgy Vinogradov, to help and simplify the hassle of calculating ones GPA"/>
 
         </LinearLayout>
     </ScrollView>

@@ -57,8 +57,8 @@ public class SettingsController implements View.OnClickListener {
 
     private void showAbout() {
         // Display the "about" message
-        String message = "This app was created by Group 8 consisting of Diego Ayala, Esteban Leal, and Georgy Vinogradov, to help and simplify the hassle of calculating ones GPA";
-        Toast.makeText(activity, message, Toast.LENGTH_SHORT).show();
+        String message = "The GPA Calculator was created by Group 8";
+        Toast.makeText(activity, message, Toast.LENGTH_LONG).show();
     }
 
     public void showHelpScreen() {
