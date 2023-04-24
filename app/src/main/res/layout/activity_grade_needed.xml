@@ -8,114 +8,161 @@
 
     <TextView
         android:id="@+id/promptText"
-        android:layout_width="136dp"
-        android:layout_height="27dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="268dp"
-        android:text="Desired Letter Grade: "
+        android:layout_width="174dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="416dp"
+        android:fontFamily="@font/archivo_black"
+        android:text="Desired\nLetter Grade: "
+        android:textAlignment="center"
+        android:textColor="@color/material_dynamic_primary50"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
         android:id="@+id/spinnerGrades"
-        android:layout_width="163dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="268dp"
-        android:layout_marginEnd="40dp"
+        android:layout_width="161dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="416dp"
+        android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/gradeNeededText"
-        android:layout_width="137dp"
-        android:layout_height="43dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginBottom="256dp"
-        android:text="2"
+        android:layout_width="162dp"
+        android:layout_height="69dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="76dp"
+        android:fontFamily="@font/archivo_black"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="0.0"
+        android:textAlignment="center"
+        android:textColor="@color/material_dynamic_primary30"
+        android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/calculateButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="160dp"
-        android:layout_marginBottom="60dp"
+        android:layout_width="189dp"
+        android:layout_height="70dp"
+        android:layout_marginEnd="108dp"
+        android:layout_marginBottom="168dp"
+        android:backgroundTint="@color/material_dynamic_primary50"
+        android:fontFamily="@font/archivo_black"
         android:text="Calculate"
-        app:layout_constraintBottom_toTopOf="@+id/gradeNeededText"
+        android:textSize="20sp"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/textView5"
-        android:layout_width="119dp"
-        android:layout_height="51dp"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="248dp"
+        android:layout_width="121dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="72dp"
+        android:fontFamily="@font/archivo_black"
         android:text="Grade Needed: "
+        android:textAlignment="center"
+        android:textColor="@color/material_dynamic_primary50"
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/gradeNeededText" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="175dp"
-        android:layout_height="54dp"
+        android:layout_width="352dp"
+        android:layout_height="56dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/sumLabInput"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="Sum of Lab Grades" />
+            android:layout_width="352dp"
+            android:layout_height="56dp"
+            android:hint="Enter Sum of Lab Grades" />
+
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
 
-        android:layout_width="170dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="200dp"
+        android:layout_width="352dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="336dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/midtermInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Midterm Score" />
+            android:layout_width="352dp"
+            android:layout_height="56dp"
+            android:hint="Enter Midterm Grade" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
 
-        android:layout_width="390dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="125dp"
+        android:layout_width="352dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="268dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/sumProjectInput"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="Sum of Project Scores (include Expected Scores)" />
+            android:layout_width="352dp"
+            android:layout_height="56dp"
+            android:hint="Enter Sum of Project Grades" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
 
-        android:layout_width="177dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="352dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="132dp"
+        android:layout_marginEnd="24dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/sumQuizInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Sum of Quiz Scores" />
+            android:layout_width="352dp"
+            android:layout_height="56dp"
+            android:hint="Enter Sum of Quiz Grades" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="218dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="100dp"
+        android:fontFamily="@font/archivo_black"
+        android:text="What Do I Need on The Final?"
+        android:textAlignment="center"
+        android:textColor="@color/material_dynamic_primary50"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
