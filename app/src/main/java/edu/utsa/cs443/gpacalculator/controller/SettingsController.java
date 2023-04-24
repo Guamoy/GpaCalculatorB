@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import edu.utsa.cs443.gpacalculator.AboutActivity;
 import edu.utsa.cs443.gpacalculator.R;
 import edu.utsa.cs443.gpacalculator.HelpActivity;
 
@@ -43,7 +44,7 @@ public class SettingsController implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.about_button:
-                showAbout();
+                showAboutScreen();
                 break;
             case R.id.help_button:
                 showHelpScreen();
@@ -55,10 +56,9 @@ public class SettingsController implements View.OnClickListener {
     }
 
 
-    private void showAbout() {
-        // Display the "about" message
-        String message = "The GPA Calculator was created by Group 8";
-        Toast.makeText(activity, message, Toast.LENGTH_LONG).show();
+    private void showAboutScreen() {
+        Intent intent = new Intent(activity, AboutActivity.class);
+        activity.startActivity(intent);
     }
 
     public void showHelpScreen() {

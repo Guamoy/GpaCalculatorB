@@ -9,9 +9,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Help"
-        android:textSize="24sp"
+        android:textSize="32sp"
         android:textStyle="bold"
-        android:layout_margin="16dp"/>
+        android:padding="16dp"/>
 
     <ScrollView
         android:layout_width="match_parent"
@@ -27,37 +27,66 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:text="Steps"
+                android:paddingBottom="8dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:textSize="18sp"
-                android:text="Steps:"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:text="Step 1:"
+                android:paddingTop="16dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:text="Choose between wanting a detailed version, a simplified version of your GPA calculation, or calculating what you will need in your final exam to pass (accuracy on detailed GPA calculator is more accurate)"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="Step 2:"
+                android:paddingTop="16dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:textSize="16sp"
-                android:text="1. Choose between wanting a detailed version, a simplified version of you GPA calculation, or calculating what you will need in your final exam to pass(accuracy on detailed GPA calculator is more accurate)"/>
+                android:text="Add the information that is needed to calculate your GPA, such as credit hours, grades and weights for the final grade, and class name"/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="Step 3:"
+                android:paddingTop="16dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:textSize="16sp"
-                android:text="2. Add the information that is needed to calcualte your GPA, such as credit hours, grades and weights for the final grade, and class name"/>
+                android:text="View your calculated GPA."/>
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:textSize="16sp"
-                android:text="3. View your calculated GPA."/>
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:text="Step 4:"
+                android:paddingTop="16dp"/>
 
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
                 android:textSize="16sp"
-                android:text="4. To start over, simply go edit this information or press the back button to head over to the main screen\n\n The GPA Calculator was created by the Debug Thugs, consisting of Diego Ayala, Esteban Leal, and Georgy Vinogradov, to help and simplify the hassle of calculating ones GPA"/>
+                android:text="To start over, simply go edit this information or press the back button to head over to the main screen."/>
 
         </LinearLayout>
     </ScrollView>
