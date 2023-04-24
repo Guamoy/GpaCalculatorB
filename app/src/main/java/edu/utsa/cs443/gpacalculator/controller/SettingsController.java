@@ -57,7 +57,7 @@ public class SettingsController implements View.OnClickListener {
 
     private void showAbout() {
         // Display the "about" message
-        String message = "The GPA Calculator was created by Group 8";
+        String message = "The GPA Calculator was created by the Debug Thugs";
         Toast.makeText(activity, message, Toast.LENGTH_LONG).show();
     }
 
