@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.Switch;
 import android.widget.Toast;
 
@@ -24,7 +25,7 @@ public class SettingsController implements View.OnClickListener {
 
     private final AppCompatActivity activity;
     private final Switch themeSwitch;
-    private final Switch notificationSwitch;
+    private final CheckBox notificationSwitch;
 
     public SettingsController(AppCompatActivity activity) {
         this.activity = activity;

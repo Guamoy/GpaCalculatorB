@@ -92,7 +92,7 @@ public class SimpleGrades {
             setGPA(this.GPA + gradeValues.get(letterGrade));
         }
         else {
-            setGPA((this.GPA * this.weightGPA + gradeValues.get(letterGrade))
+            setGPA((this.GPA * this.weightGPA + gradeValues.get(letterGrade) * creditHours)
                     / (this.weightGPA + creditHours));
         }
         increaseWeightGPA(creditHours);
