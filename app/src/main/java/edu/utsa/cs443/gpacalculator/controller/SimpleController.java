@@ -1,3 +1,11 @@
+/**
+ * Grade Needed Controller contains onClick method and directs activity based on user input
+ *
+ * @author Esteban Leal tei192
+ * @author Georgy Vinogradov klr151
+ * UTSA CS 3443 - GPA Calculator
+ * Spring 2023
+ */
 package edu.utsa.cs443.gpacalculator.controller;
 
 import android.app.Activity;
@@ -19,6 +27,11 @@ public class SimpleController extends AppCompatActivity implements View.OnClickL
         this.activity = activity;
     }
 
+    /**
+     * On user click, credit hours will be incremented by -1 or +1, or letter grade is input
+     * into SimpleGrades model
+     * @param view The view that was clicked.
+     */
     @Override
     public void onClick(View view) {
         Button clickedButton = (Button) view;
@@ -37,22 +50,35 @@ public class SimpleController extends AppCompatActivity implements View.OnClickL
         }
     }
 
+    /**
+     * Creates SimpleGrades model and calls to set initial display values
+     */
     public void createModel() {
         grades = new SimpleGrades(0.0, 0);
         initializeDisplays();
     }
 
+    /**
+     * Sets current GPA text on screen to initial GPA of 0.0
+     */
     private void initializeDisplays() {
         TextView gpaText = activity.findViewById(R.id.simple_GPA_display);
         gpaText.setText(Double.toString(grades.getGPA()));
         //ideally GPA should be truncated to 2 decimal places in getGPA()
     }
 
+    /**
+     * Sets GPA displayed on screen to GPA stored in SimpleGrades Model
+     */
     private void updateGPA() {
         TextView gpaText = activity.findViewById(R.id.simple_GPA_display);
         gpaText.setText(grades.getGPAAsString());
     }
 
+    /**
+     * Updates credit hours displayed on screen by +1 or -1 depending on button pressed
+     * @param change
+     */
     private void updateCreditHours(int change) {
         TextView creditText = activity.findViewById(R.id.creditsSimple);
         int newValue = Integer.parseInt(creditText.getText().toString()) + change;
@@ -60,7 +86,6 @@ public class SimpleController extends AppCompatActivity implements View.OnClickL
     }
 
     /**
-     * TODO Change append method from new line on each input to more condensed method of display
      * also maybe show value of Letter Grade as well (A+ - 4.0, C - 2.0)
      * @param input
      */

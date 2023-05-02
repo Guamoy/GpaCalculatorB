@@ -1,3 +1,12 @@
+/**
+ * Settings Controller handles activity on Settings screen, contains FILE io for configuration set
+ * by user
+ *
+ * @author Esteban Leal tei192
+ * @author Georgy Vinogradov klr151
+ * UTSA CS 3443 - GPA Calculator
+ * Spring 2023
+ */
 package edu.utsa.cs443.gpacalculator.controller;
 
 import android.content.Context;
@@ -27,6 +36,12 @@ public class SettingsController implements View.OnClickListener {
     private final Switch themeSwitch;
     private final CheckBox notificationSwitch;
 
+    /**
+     * Sets onClickListeners for buttons and switches in settings, records user changes
+     * and calls for file io when user saves settings
+     *
+     * @param activity
+     */
     public SettingsController(AppCompatActivity activity) {
         this.activity = activity;
 
@@ -54,6 +69,12 @@ public class SettingsController implements View.OnClickListener {
         }
     }
 
+    /**
+     * On user click, pressed button will lead to new activity, change switch / checkbox state,
+     * or write to file
+     *
+     * @param v The view that was clicked.
+     */
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -75,16 +96,25 @@ public class SettingsController implements View.OnClickListener {
         }
     }
 
+    /**
+     * Opens AboutActivity
+     */
     private void showAboutScreen() {
         Intent intent = new Intent(activity, AboutActivity.class);
         activity.startActivity(intent);
     }
 
+    /**
+     * Opens HelpActivity
+     */
     public void showHelpScreen() {
         Intent intent = new Intent(activity, HelpActivity.class);
         activity.startActivity(intent);
     }
 
+    /**
+     * Changes theme of app to theme indicated by switch (Dark or Light)
+     */
     private void toggleTheme() {
         // Get the current theme from shared preferences
         SharedPreferences preferences = activity.getPreferences(Context.MODE_PRIVATE);
@@ -108,6 +138,9 @@ public class SettingsController implements View.OnClickListener {
         activity.startActivity(intent);
     }
 
+    /**
+     * Switches Notification checkbox to opposite of current state and outputs toast for user
+     */
     private void toggleNotification() {
         // Get the current notification setting from shared preferences
         SharedPreferences preferences = activity.getPreferences(Context.MODE_PRIVATE);
@@ -126,6 +159,9 @@ public class SettingsController implements View.OnClickListener {
         }
     }
 
+    /**
+     * Writes current state of notifications checkbox and theme switch to file
+     */
     private void saveSettings() {
         // Get the current settings from the switches
         boolean isDarkTheme = themeSwitch.isChecked();
