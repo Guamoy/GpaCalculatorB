@@ -1,3 +1,12 @@
+/**
+ * Settings Activity contains settings view, which allows user to change theme and enable/disable
+ * notifications. Additional buttons allow navigation to help and about screens.
+ *
+ * @author Esteban Leal tei192
+ * @author Georgy Vinogradov klr151
+ * UTSA CS 3443 - GPA Calculator
+ * Spring 2023
+ */
 package edu.utsa.cs443.gpacalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,11 +25,19 @@ import java.io.OutputStreamWriter;
 import edu.utsa.cs443.gpacalculator.R;
 import edu.utsa.cs443.gpacalculator.controller.SettingsController;
 
+
 public class SettingsActivity extends AppCompatActivity {
 
     private SettingsController settingsController;
     private Switch themeSwitch;
 
+    /**
+     * Creates settings view and sets onClickListeners
+     * @param savedInstanceState If the activity is being re-initialized after
+     *     previously being shut down then this Bundle contains the data it most
+     *     recently supplied in {@link #onSaveInstanceState}.  <b><i>Note: Otherwise it is null.</i></b>
+     *
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +55,9 @@ public class SettingsActivity extends AppCompatActivity {
         });
     }
 
+    /**
+     * On click of save button press, current settings are written to file
+     */
     private void saveSettingsToFile() {
         // Get the current state of the notification checkbox and theme switch
         boolean notificationsEnabled = ((CheckBox) findViewById(R.id.notification_checkbox)).isChecked();
@@ -56,6 +76,10 @@ public class SettingsActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Returns Switch corresponding to app theme option
+     * @return Switch themeSwitch
+     */
     public Switch getThemeSwitch() {
         if (themeSwitch == null) {
             themeSwitch = findViewById(R.id.theme_switch);

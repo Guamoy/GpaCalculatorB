@@ -1,3 +1,11 @@
+/**
+ * Grade Needed Activity creates view and initializes values contained in spinner
+ *
+ * @author Esteban Leal tei192
+ * @author Georgy Vinogradov klr151
+ * UTSA CS 3443 - GPA Calculator
+ * Spring 2023
+ */
 package edu.utsa.cs443.gpacalculator;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +22,15 @@ import edu.utsa.cs443.gpacalculator.controller.GradeNeededController;
 public class GradeNeededActivity extends AppCompatActivity {
 
     private GradeNeededController controller;
+
+    /**
+     * Creates view and sets onClickListener for single button "calculate"
+     *
+     * @param savedInstanceState If the activity is being re-initialized after
+     *     previously being shut down then this Bundle contains the data it most
+     *     recently supplied in {@link #onSaveInstanceState}.  <b><i>Note: Otherwise it is null.</i></b>
+     *
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +44,9 @@ public class GradeNeededActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Populates Spinner values with letter grades
+     */
     private void initializeSpinner() {
         List<String> spinnerList = new ArrayList<>();
         spinnerList.add("A+");

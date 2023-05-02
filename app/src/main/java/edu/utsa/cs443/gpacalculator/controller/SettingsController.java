@@ -1,6 +1,5 @@
 /**
- * Settings Controller handles activity on Settings screen, contains FILE io for configuration set
- * by user
+ * GradeNeeded Activity,
  *
  * @author Esteban Leal tei192
  * @author Georgy Vinogradov klr151
