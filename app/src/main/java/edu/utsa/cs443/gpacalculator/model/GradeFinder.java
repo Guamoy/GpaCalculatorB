@@ -1,3 +1,12 @@
+/**
+ * Model Class for GradeNeeded Activity, calculates GPA required for a desired letter grade
+ * based on current user scores that were inputted
+ *
+ * @author Esteban Leal tei192
+ * @author Georgy Vinogradov klr151
+ * UTSA CS 3443 - GPA Calculator
+ * Spring 2023
+ */
 package edu.utsa.cs443.gpacalculator.model;
 
 import java.util.HashMap;
@@ -79,9 +88,7 @@ public class GradeFinder {
 
     /**
      * Computes minimum necessary score to achieve desired letter grade
-     * TODO Collect user blackboard scores for the four categories below
      *
-     * Max score is calculated from following:
      * All assignments are 100 points on blackboard
      * 6 Quizzes - 14% weight
      * 5 Labs + 1 Extra Credit - 36% weight

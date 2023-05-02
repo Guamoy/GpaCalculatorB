@@ -1,3 +1,12 @@
+/**
+ * Simple Grades model, receives user input from button pad and updates GPA stored in model based
+ * on input and credit hours assigned to course
+ *
+ * @author Esteban Leal tei192
+ * @author Georgy Vinogradov klr151
+ * UTSA CS 3443 - GPA Calculator
+ * Spring 2023
+ */
 package edu.utsa.cs443.gpacalculator.model;
 
 import java.util.HashMap;
