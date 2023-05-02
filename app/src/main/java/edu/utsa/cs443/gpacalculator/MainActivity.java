@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
         controller = new MainController(this);
 
-        int[] buttonIDs = {R.id.detailed, R.id.simple, R.id.gradeNeededButton, R.id.settings};
+        int[] buttonIDs = {R.id.simple, R.id.gradeNeededButton, R.id.settings};
 
         for (int buttonID : buttonIDs) {
             findViewById(buttonID).setOnClickListener(controller);

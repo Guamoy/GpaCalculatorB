@@ -15,18 +15,6 @@
             android:name=".GradeNeededActivity"
             android:exported="false" />
         <activity
-            android:name=".AssignEditActivity"
-            android:exported="false" />
-        <activity
-            android:name=".SemesterEditActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ClassEditActivity"
-            android:exported="false" />
-        <activity
-            android:name=".DetailedActivity"
-            android:exported="false" />
-        <activity
             android:name=".SimpleActivity"
             android:exported="false" />
         <activity
